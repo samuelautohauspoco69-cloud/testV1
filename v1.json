@@ -1,0 +1,570 @@
+{
+  "Globals Functions": [
+    {
+      "Name": "loadstring / load",
+      "Lua": "function loadstring(chunk: string, chunkname: string)",
+      "Beschreibung": "Loads chunk as a Lua function and returns it if compilation is successful. Otherwise, if an error has occurred during compilation, nil followed by the error message will be returned."
+    },
+    {
+      "Name": "decompile",
+      "Lua": "function decompile(script: Instance): string",
+      "Beschreibung": "Decompiles Script and returns the decompiled script. If the decompilation fails, then notify an error message."
+    },
+    {
+      "Name": "WorldToScreen",
+      "Lua": "function WorldToScreen(position: Vector3): (Vector2, boolean)",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "require",
+      "Lua": "function require(path: string): table",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "wait",
+      "Lua": "function wait(time: number)",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "spawn",
+      "Lua": "function spawn(target: function): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "print / printl",
+      "Lua": "function print(message: string)",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "warn",
+      "Lua": "function warn(message: string)",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "error",
+      "Lua": "function error(message: string)",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Input Functions": [
+    {
+      "Name": "setrobloxinput",
+      "Lua": "setrobloxinput(state: boolean): nil",
+      "Beschreibung": "This function toggles sending inputs to the game"
+    },
+    {
+      "Name": "setclipboard",
+      "Lua": "function setclipboard(value: string): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "keypress",
+      "Lua": "function keypress(keycode: int): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "keyrelease",
+      "Lua": "function keyrelease(keycode: int): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "iskeypressed",
+      "Lua": "function iskeypressed(keycode: int): bool",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "ismouse1pressed",
+      "Lua": "function ismouse1pressed(): bool",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "ismouse2pressed",
+      "Lua": "function ismouse2pressed(): bool",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mouse1press",
+      "Lua": "function mouse1press(): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mouse1release",
+      "Lua": "function mouse1release(): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mouse1click",
+      "Lua": "function mouse1click(): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mouse2press",
+      "Lua": "function mouse2press(): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mouse2release",
+      "Lua": "function mouse2release(): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mouse2click",
+      "Lua": "function mouse2click(): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mousemoveabs",
+      "Lua": "function mousemoveabs(x: int, y: int): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mousemoverel",
+      "Lua": "function mousemoverel(x: int, y: int): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "mousescroll",
+      "Lua": "function mousescroll(amount: int): nil",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Miscellaneous Functions": [
+    {
+      "Name": "run_secure",
+      "Lua": "function run_secure(text: string)",
+      "Beschreibung": "Run protected code."
+    },
+    {
+      "Name": "Set Fast Flag",
+      "Lua": "function setfflag(FFlag: string, value: string)",
+      "Beschreibung": "Sets FFlag with Value. "
+    },
+    {
+      "Name": "Get Fast Flag",
+      "Lua": "function getfflag(FFlag: string)",
+      "Beschreibung": "Sets FFlag with Value. "
+    }
+  ],
+
+  "Memory Functions": [
+    {
+      "Name": "getbase",
+      "Lua": "function getbase(): int",
+      "Beschreibung": "Return RobloxPlayerBeta.exe base address."
+    },
+    {
+      "Name": "memory_write",
+      "Lua": "function memory_write(memoryType: string, address: int, value: any): nil",
+      "Beschreibung": "Schreibt einen Wert in den angegebenen Speicherbereich vom Typ 'memoryType'."
+    },
+    {
+      "Name": "memory_read",
+      "Lua": "function memory_read(memoryType: string, address: int): any",
+      "Beschreibung": "Liest einen Wert aus dem angegebenen Speicherbereich vom Typ 'memoryType'."
+    }
+  ],
+
+  "Memory Types": [
+    {
+      "Type": "int",
+      "Returns": "int"
+    },
+    {
+      "Type": "float",
+      "Returns": "number"
+    },
+    {
+      "Type": "double",
+      "Returns": "number"
+    },
+    {
+      "Type": "byte",
+      "Returns": "int"
+    },
+    {
+      "Type": "string",
+      "Returns": "string"
+    },
+    {
+      "Type": "uintptr_t",
+      "Returns": "int"
+    }
+  ],
+
+  "BasePart": [
+    {
+      "Name": "Size",
+      "Lua": "BasePart.Size: Vector3",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Position",
+      "Lua": "BasePart.Position: Vector3",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Transparency",
+      "Lua": "BasePart.Transparency: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Color",
+      "Lua": "BasePart.Color: Color3",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Velocity",
+      "Lua": "BasePart.Velocity: Vector3",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "AssemblyLinearVelocity",
+      "Lua": "BasePart.AssemblyLinearVelocity: Vector3",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "CanCollide",
+      "Lua": "BasePart.CanCollide: bool",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Camera": [
+    {
+      "Name": "lookAt",
+      "Lua": "Camera.lookAt(at: Vector3, lookAt: Vector3)",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "ViewportSize",
+      "Lua": "Camera.ViewportSize: Vector2",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "FieldOfView",
+      "Lua": "Camera.FieldOfView: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Position",
+      "Lua": "Camera.Position: Vector3",
+      "Beschreibung": ""
+    }
+  ],
+
+  "DataModel": [
+    {
+      "Name": "PlaceId",
+      "Lua": "Instance.PlaceId: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "GameId",
+      "Lua": "Instance.GameId: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "JobId",
+      "Lua": "Instance.JobId: string",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "HttpGet",
+      "Lua": "function DataModel:HttpGet(url: string, content: string): any",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "GetService",
+      "Lua": "function DataModel:GetService(name: string): Instance",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Humanoid": [
+    {
+      "Name": "MaxHealth",
+      "Lua": "Humanoid.MaxHealth: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Health",
+      "Lua": "Humanoid.Health: number",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Model": [
+    {
+      "Name": "PrimaryPart",
+      "Lua": "Model.PrimaryPart: BasePart",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Workspace": [
+    {
+      "Name": "CurrentCamera",
+      "Lua": "Workspace.CurrentCamera: Camera",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Instance": [
+    {
+      "Name": "Name",
+      "Lua": "Instance.Name: string",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "ClassName",
+      "Lua": "Instance.ClassName: string",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Parent",
+      "Lua": "Instance.Parent: Instance",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Address",
+      "Lua": "Instance.Address: number",
+      "Beschreibung": "Hexadecimal number representing the Instance’s memory address."
+    },
+    {
+      "Name": "FindFirstChildOfClass",
+      "Lua": "function Instance:FindFirstChildOfClass(name: string): Instance",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "FindFirstChild",
+      "Lua": "function Instance:FindFirstChild(name: string): Instance",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "IsA",
+      "Lua": "function Instance:IsA(name: string): boolean",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "GetFullName",
+      "Lua": "function Instance:GetFullName(): string",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "GetChildren",
+      "Lua": "function Instance:GetChildren(): { Instance }",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "GetAttribute",
+      "Lua": "function Instance:GetAttribute(name: string): any",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "GetAttributes",
+      "Lua": "function Instance:GetAttributes(): { string }",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "SetAttribute",
+      "Lua": "function Instance:SetAttribute(name: string, value: any): nil",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "GetDescendants",
+      "Lua": "function Instance:GetDescendants(): { Instance }",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "WaitForChild",
+      "Lua": "function Instance:WaitForChild(name: string): Instance",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Mouse": [
+    {
+      "Name": "Mouse",
+      "Lua": "Mouse.X: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Mouse",
+      "Lua": "Mouse.Y: number",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Players": [
+    {
+      "Name": "LocalPlayer",
+      "Lua": "Players.LocalPlayer: Player",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Player": [
+    {
+      "Name": "Character",
+      "Lua": "Player.Character: Model",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Team",
+      "Lua": "Player.Team: Team",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "GetMouse",
+      "Lua": "function Player:GetMouse(): Mouse",
+      "Beschreibung": ""
+    }
+  ],
+
+  "ValueBase": [
+    {
+      "Name": "Value",
+      "Lua": "ValueBase.Value: any",
+      "Beschreibung": ""
+    }
+    
+  ],
+
+  "GuiObject": [
+    {
+      "Name": "AbsoluteSize",
+      "Lua": "GuiObject.AbsoluteSize: Vector2",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "AbsolutePosition",
+      "Lua": "GuiObject.AbsolutePosition: Vector2",
+      "Beschreibung": ""
+    }
+  ],
+
+  "TextLabel": [
+    {
+      "Name": "Properties",
+      "Lua": "TextLabel.Text: string",
+      "Beschreibung": ""
+    }
+  ],
+
+  "MeshPart": [
+    {
+      "Name": "TextureId",
+      "Lua": "MeshPart.TextureId: string",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "MeshId",
+      "Lua": "MeshPart.MeshId: string",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Vector3": [
+    {
+      "Name": "new",
+      "Lua": "Vector3.new(x : number, y : number, z : number)",
+      "Beschreibung": "Returns a new Vector3 from the given x, y, and z components."
+    },
+    {
+      "Name": "X",
+      "Lua": "Vector3.X: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Y",
+      "Lua": "Vector3.Y: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Z",
+      "Lua": "Vector3.Z: number",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Vector2": [
+    {
+      "Name": "new",
+      "Lua": "Vector2.new(x : number, y : number)",
+      "Beschreibung": "Returns a Vector2 from the given x and y components."
+    },
+    {
+      "Name": "X",
+      "Lua": "Vector2.X: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "Y",
+      "Lua": "Vector2.Y: number",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Color3": [
+    {
+      "Name": "new",
+      "Lua": "Color3.new(red: number, green: number, blue: number)",
+      "Beschreibung": "Returns a Color3 with the given red, green, and blue values."
+    },
+    {
+      "Name": "fromRGB",
+      "Lua": "Color3.fromRGB(red: number, green: number, blue: number)",
+      "Beschreibung": "Returns a Color3 from given components within the range of 0 to 255."
+    },
+    {
+      "Name": "fromHSV",
+      "Lua": "Color3.fromHSV(hue: number, saturation: number, value: number)",
+      "Beschreibung": "Returns a Color3 from the given hue, saturation, and value components."
+    },
+    {
+      "Name": "fromHex",
+      "Lua": "Color3.fromHex(hex: string)",
+      "Beschreibung": "Returns a Color3 from a given hex value."
+    },
+    {
+      "Name": "R",
+      "Lua": "Color3.R: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "G",
+      "Lua": "Color3.G: number",
+      "Beschreibung": ""
+    },
+    {
+      "Name": "B",
+      "Lua": "Color3.B: number",
+      "Beschreibung": ""
+    }
+  ],
+
+  "Drawing": [
+    {
+      "Name": "Example code",
+      "Lua Line 1": "local square = Drawing.new('Square')",
+      "Lua Line 2": "square.Filled = true",
+      "Lua Line 3": "square.Color = Color3.fromRGB(255, 0, 0)",
+      "Lua Line 4": "square.Position = Vector2.new(20, 20)",
+      "Lua Line 5": "square.Size = Vector2.new(200, 200)",
+      "Lua Line 6": "square.Visible = true",
+      "Lua Line 7": "wait(5)",
+      "Lua Line 8": "square:Remove()",
+      "Beschreibung": "The following snippet will display a red square on the user's screen for 5 seconds."
+    }
+  ],
+
+  "DrawingObject": [
+    {
+      "Name": "new",
+      "Lua": "Drawing.new(drawingType: string): DrawingObject",
+      "Beschreibung": "drawingType must be one of the following types: Square, Line, Circle, Text, Triangle"
+    }
+  ]
+}
